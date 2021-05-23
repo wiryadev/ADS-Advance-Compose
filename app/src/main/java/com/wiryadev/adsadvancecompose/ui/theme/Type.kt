@@ -11,10 +11,13 @@ import com.wiryadev.adsadvancecompose.R
 
 // Set of Material typography styles to start with
 val Montserrat = FontFamily(
-    Font(R.font.montserrat_light, FontWeight.W300),
+    Font(R.font.montserrat_light, FontWeight.Light),
+    Font(R.font.montserrat_regular, FontWeight.Normal),
     Font(R.font.montserrat_regular, FontWeight.W400),
+    Font(R.font.montserrat_medium, FontWeight.Medium),
     Font(R.font.montserrat_medium, FontWeight.W500),
-    Font(R.font.montserrat_bold, FontWeight.W700),
+    Font(R.font.montserrat_semi_bold, FontWeight.SemiBold),
+    Font(R.font.montserrat_bold, FontWeight.Bold),
 
 )
 val Typography = Typography(
