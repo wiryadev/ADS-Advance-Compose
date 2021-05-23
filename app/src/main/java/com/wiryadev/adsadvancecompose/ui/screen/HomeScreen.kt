@@ -58,15 +58,19 @@ fun HomeScreen() {
                 modifier = Modifier
                     .padding(top = 36.dp)
             )
-            TravelCard(
-                modifier = Modifier.padding(top = 36.dp)
+            Spacer(
+                modifier = Modifier.height(24.dp)
             )
-            DepartureCard(
-                modifier = Modifier.padding(top = 24.dp)
+            TravelCard()
+            Spacer(
+                modifier = Modifier.height(24.dp)
+            )
+            DepartureCard()
+            Spacer(
+                modifier = Modifier.height(36.dp)
             )
             ButtonPrimary(
                 onClick = { },
-                modifier = Modifier.padding(top = 36.dp),
                 text = "CARI BUS"
             )
         }

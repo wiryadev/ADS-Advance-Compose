@@ -35,12 +35,10 @@ fun DepartureCard(
         Row(
             modifier = Modifier
                 .fillMaxWidth(),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceBetween
+            verticalAlignment = Alignment.Bottom,
+            horizontalArrangement = Arrangement.SpaceBetween,
         ) {
-            Column(
-                modifier = Modifier
-            ) {
+            Column {
                 Text(
                     text = "Tanggal Keberangkatan",
                     color = Color(0xFFA7ADBF),
@@ -62,6 +60,7 @@ fun DepartureCard(
             Image(
                 painter = painterResource(id = R.drawable.ic_baseline_keyboard_arrow_down_24),
                 contentDescription = "Pilih",
+                alignment = Alignment.BottomEnd
             )
         }
         Spacer(
@@ -71,12 +70,10 @@ fun DepartureCard(
         Row(
             modifier = Modifier
                 .fillMaxWidth(),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceBetween
+            verticalAlignment = Alignment.Bottom,
+            horizontalArrangement = Arrangement.SpaceBetween,
         ) {
-            Column(
-                modifier = Modifier
-            ) {
+            Column {
                 Text(
                     text = "Penumpang",
                     color = Color(0xFFA7ADBF),
@@ -107,12 +104,10 @@ fun DepartureCard(
         Row(
             modifier = Modifier
                 .fillMaxWidth(),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceBetween
+            verticalAlignment = Alignment.Bottom,
+            horizontalArrangement = Arrangement.SpaceBetween,
         ) {
-            Column(
-                modifier = Modifier
-            ) {
+            Column {
                 Text(
                     text = "Tipe Bus",
                     color = Color(0xFFA7ADBF),

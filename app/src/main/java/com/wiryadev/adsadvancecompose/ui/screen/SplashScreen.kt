@@ -1,4 +1,4 @@
-package com.wiryadev.adsadvancecompose.ui.components
+package com.wiryadev.adsadvancecompose.ui.screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background

@@ -9,7 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.wiryadev.adsadvancecompose.SplashScreenActivity.Companion.BACKGROUND_BOTTOM
 import com.wiryadev.adsadvancecompose.SplashScreenActivity.Companion.LOGO
-import com.wiryadev.adsadvancecompose.ui.components.SplashScreen
+import com.wiryadev.adsadvancecompose.ui.screen.SplashScreen
 import com.wiryadev.adsadvancecompose.ui.theme.ADSAdvanceComposeTheme
 
 class SplashScreenActivity : ComponentActivity() {

@@ -43,7 +43,9 @@ fun TravelCard(
             ) = createRefs()
 
             Image(
-                painter = painterResource(id = R.drawable.ic_location_from),
+                painter = painterResource(
+                    id = R.drawable.ic_location_from
+                ),
                 contentDescription = "Berangkat dari",
                 modifier = Modifier
                     .constrainAs(icon) {
@@ -75,16 +77,17 @@ fun TravelCard(
                         fontFamily = Montserrat,
                         fontWeight = FontWeight.Medium,
                         fontSize = 18.sp
-                    )
+                    ),
                 )
             }
             Image(
-                painter = painterResource(id = R.drawable.ic_baseline_keyboard_arrow_down_24),
+                painter = painterResource(
+                    id = R.drawable.ic_baseline_keyboard_arrow_down_24
+                ),
                 contentDescription = "Pilih",
                 modifier = Modifier
                     .constrainAs(arrow) {
                         end.linkTo(parent.end)
-                        top.linkTo(column.top)
                         bottom.linkTo(column.bottom)
                     }
             )
@@ -104,7 +107,9 @@ fun TravelCard(
             ) = createRefs()
 
             Image(
-                painter = painterResource(id = R.drawable.ic_location_to),
+                painter = painterResource(
+                    id = R.drawable.ic_location_to
+                ),
                 contentDescription = "Berangkat dari",
                 modifier = Modifier
                     .constrainAs(icon) {
@@ -140,12 +145,13 @@ fun TravelCard(
                 )
             }
             Image(
-                painter = painterResource(id = R.drawable.ic_baseline_keyboard_arrow_down_24),
+                painter = painterResource(
+                    id = R.drawable.ic_baseline_keyboard_arrow_down_24
+                ),
                 contentDescription = "Pilih",
                 modifier = Modifier
                     .constrainAs(arrow) {
                         end.linkTo(parent.end)
-                        top.linkTo(column.top)
                         bottom.linkTo(column.bottom)
                     }
             )
