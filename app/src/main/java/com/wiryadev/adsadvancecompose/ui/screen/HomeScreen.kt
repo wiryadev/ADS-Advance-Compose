@@ -14,6 +14,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.constraintlayout.compose.ConstraintLayout
 import com.wiryadev.adsadvancecompose.ui.components.ButtonPrimary
 import com.wiryadev.adsadvancecompose.ui.components.DepartureCard
 import com.wiryadev.adsadvancecompose.ui.components.TravelCard
@@ -22,10 +23,21 @@ import com.wiryadev.adsadvancecompose.ui.theme.Montserrat
 
 @Composable
 fun HomeScreen() {
-    Box(
+    ConstraintLayout(
         modifier = Modifier
-            .background(color = Color(0xFFEFF2FD))
+            .fillMaxSize()
+            .background(
+                color = Color(0xFFEFF2FD)
+            )
     ) {
+        val (
+            bgTop,
+            text,
+            travelCard,
+            departureCard,
+            button,
+        ) = createRefs()
+
         Box(
             modifier = Modifier
                 .background(
@@ -36,44 +48,61 @@ fun HomeScreen() {
                         )
                     )
                 )
-                .fillMaxHeight(0.20f)
+                .fillMaxHeight(0.25f)
                 .fillMaxWidth()
-                .align(alignment = Alignment.TopCenter)
+                .constrainAs(bgTop) {
+                    top.linkTo(parent.top)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                }
         )
-        Column(
+        Text(
+            text = "Cari Bus",
+            color = Color.White,
+            textAlign = TextAlign.Center,
+            style = TextStyle(
+                fontFamily = Montserrat,
+                fontSize = 28.sp,
+                fontWeight = FontWeight.SemiBold
+            ),
             modifier = Modifier
-                .fillMaxSize()
+                .constrainAs(text) {
+                    top.linkTo(parent.top)
+                    bottom.linkTo(travelCard.top)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                },
+        )
+        TravelCard(
+            modifier = Modifier
+                .constrainAs(travelCard) {
+                    top.linkTo(bgTop.bottom)
+                    bottom.linkTo(bgTop.bottom)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                }
                 .padding(horizontal = 16.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Text(
-                text = "Cari Bus",
-                color = Color.White,
-                textAlign = TextAlign.Center,
-                style = TextStyle(
-                    fontFamily = Montserrat,
-                    fontSize = 22.sp,
-                    fontWeight = FontWeight.Medium
-                ),
-                modifier = Modifier
-                    .padding(top = 36.dp)
-            )
-            Spacer(
-                modifier = Modifier.height(24.dp)
-            )
-            TravelCard()
-            Spacer(
-                modifier = Modifier.height(24.dp)
-            )
-            DepartureCard()
-            Spacer(
-                modifier = Modifier.height(36.dp)
-            )
-            ButtonPrimary(
-                onClick = { },
-                text = "CARI BUS"
-            )
-        }
+        )
+        DepartureCard(
+            modifier = Modifier
+                .constrainAs(departureCard) {
+                    top.linkTo(travelCard.bottom, 24.dp)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                }
+                .padding(horizontal = 16.dp),
+        )
+        ButtonPrimary(
+            onClick = { },
+            modifier = Modifier
+                .constrainAs(button) {
+                    top.linkTo(departureCard.bottom, margin = 36.dp)
+                    start.linkTo(parent.start)
+                    end.linkTo(parent.end)
+                }
+                .padding(horizontal = 16.dp),
+            text = "Cari Bus"
+        )
     }
 }
 

@@ -63,7 +63,7 @@ fun ButtonPrimary(
                 color = Color.White,
                 style = TextStyle(
                     fontFamily = Montserrat,
-                    fontWeight = FontWeight.SemiBold,
+                    fontWeight = FontWeight.Bold,
                     fontSize = 18.sp
                 ),
                 modifier = Modifier.fillMaxWidth(),
@@ -85,7 +85,7 @@ fun ButtonPrimaryPreview() {
         ) {
             ButtonPrimary(
                 onClick = {},
-                text = "CLICK ME"
+                text = "Click Me"
             )
         }
     }
