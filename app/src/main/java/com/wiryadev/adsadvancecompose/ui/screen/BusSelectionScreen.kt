@@ -101,15 +101,12 @@ fun BusSelectionScreen() {
                 }
                 .padding(horizontal = 16.dp)
                 .clip(RoundedCornerShape(24.dp)),
+            verticalArrangement = Arrangement.spacedBy(2.dp)
         ) {
             items(4) {
                 Column {
                     ItemBus(
                         item = Random.nextInt(1, 3)
-                    )
-                    Spacer(
-                        modifier = Modifier
-                            .height(2.dp)
                     )
                 }
             }
