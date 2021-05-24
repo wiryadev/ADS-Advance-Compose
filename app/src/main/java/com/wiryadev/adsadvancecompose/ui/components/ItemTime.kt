@@ -27,12 +27,15 @@ fun ItemTime(
 ) {
     Card(
         modifier = modifier
-            .padding(vertical = 8.dp, horizontal = 16.dp),
+            .padding(
+                vertical = 8.dp,
+                horizontal = 16.dp
+            ),
         shape = RoundedCornerShape(50),
         backgroundColor = MaterialTheme.colors.background,
         border = BorderStroke(
             width = 1.dp,
-            color = Color(0xFF707070)
+            color = MaterialTheme.colors.onSurface
         ),
     ) {
         Text(

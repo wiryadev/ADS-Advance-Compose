@@ -45,7 +45,7 @@ fun ItemBus(
             Column {
                 Text(
                     text = "Tipe List",
-                    color = Color.Black,
+                    color = MaterialTheme.colors.onSurface,
                     style = TextStyle(
                         fontFamily = Montserrat,
                         fontWeight = FontWeight.Medium,
@@ -66,7 +66,7 @@ fun ItemBus(
             ) {
                 Text(
                     text = "Rp 500.000",
-                    color = Color.Black,
+                    color = MaterialTheme.colors.onSurface,
                     style = TextStyle(
                         fontFamily = Montserrat,
                         fontWeight = FontWeight.SemiBold,

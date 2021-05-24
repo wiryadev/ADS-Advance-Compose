@@ -3,6 +3,7 @@ package com.wiryadev.adsadvancecompose.ui.components
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -27,7 +28,7 @@ fun DepartureCard(
             .clip(
                 shape = RoundedCornerShape(16.dp)
             )
-            .background(Color.White)
+            .background(MaterialTheme.colors.background)
             .padding(24.dp)
     ) {
         Row(
@@ -47,7 +48,7 @@ fun DepartureCard(
                 )
                 Text(
                     text = "Sabtu, 22 Mei 2021",
-                    color = Color.Black,
+                    color = MaterialTheme.colors.onSurface,
                     style = TextStyle(
                         fontFamily = Montserrat,
                         fontWeight = FontWeight.Medium,
@@ -81,7 +82,7 @@ fun DepartureCard(
                 )
                 Text(
                     text = "0 Penumpang",
-                    color = Color.Black,
+                    color = MaterialTheme.colors.onSurface,
                     style = TextStyle(
                         fontFamily = Montserrat,
                         fontWeight = FontWeight.Medium,
@@ -115,7 +116,7 @@ fun DepartureCard(
                 )
                 Text(
                     text = "Pilih Bus",
-                    color = Color.Black,
+                    color = MaterialTheme.colors.onSurface,
                     style = TextStyle(
                         fontFamily = Montserrat,
                         fontWeight = FontWeight.Medium,

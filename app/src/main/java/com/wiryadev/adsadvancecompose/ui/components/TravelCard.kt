@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -29,7 +30,7 @@ fun TravelCard(
             .clip(
                 shape = RoundedCornerShape(16.dp)
             )
-            .background(Color.White)
+            .background(MaterialTheme.colors.background)
             .padding(24.dp)
     ) {
         ConstraintLayout(
@@ -72,7 +73,7 @@ fun TravelCard(
                 )
                 Text(
                     text = "Terminal Bekasi",
-                    color = Color.Black,
+                    color = MaterialTheme.colors.onSurface,
                     style = TextStyle(
                         fontFamily = Montserrat,
                         fontWeight = FontWeight.Medium,
@@ -134,7 +135,7 @@ fun TravelCard(
                 )
                 Text(
                     text = "Terminal Jakarta",
-                    color = Color.Black,
+                    color = MaterialTheme.colors.onSurface,
                     style = TextStyle(
                         fontFamily = Montserrat,
                         fontWeight = FontWeight.Medium,
