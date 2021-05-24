@@ -80,10 +80,8 @@ fun TravelCard(
                     ),
                 )
             }
-            Image(
-                painter = painterResource(
-                    id = R.drawable.ic_baseline_keyboard_arrow_down_24
-                ),
+            ArrowIcon(
+                drawable = R.drawable.ic_baseline_keyboard_arrow_down_24,
                 contentDescription = "Pilih",
                 modifier = Modifier
                     .constrainAs(arrow) {
@@ -144,10 +142,8 @@ fun TravelCard(
                     )
                 )
             }
-            Image(
-                painter = painterResource(
-                    id = R.drawable.ic_baseline_keyboard_arrow_down_24
-                ),
+            ArrowIcon(
+                drawable = R.drawable.ic_baseline_keyboard_arrow_down_24,
                 contentDescription = "Pilih",
                 modifier = Modifier
                     .constrainAs(arrow) {

@@ -1,6 +1,5 @@
 package com.wiryadev.adsadvancecompose.ui.components
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -10,7 +9,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -57,10 +55,9 @@ fun DepartureCard(
                     )
                 )
             }
-            Image(
-                painter = painterResource(id = R.drawable.ic_baseline_keyboard_arrow_down_24),
+            ArrowIcon(
+                drawable = R.drawable.ic_baseline_keyboard_arrow_down_24,
                 contentDescription = "Pilih",
-                alignment = Alignment.BottomEnd
             )
         }
         Spacer(
@@ -92,8 +89,8 @@ fun DepartureCard(
                     )
                 )
             }
-            Image(
-                painter = painterResource(id = R.drawable.ic_baseline_keyboard_arrow_down_24),
+            ArrowIcon(
+                drawable = R.drawable.ic_baseline_keyboard_arrow_down_24,
                 contentDescription = "Pilih",
             )
         }
@@ -126,8 +123,8 @@ fun DepartureCard(
                     )
                 )
             }
-            Image(
-                painter = painterResource(id = R.drawable.ic_baseline_keyboard_arrow_down_24),
+            ArrowIcon(
+                drawable = R.drawable.ic_baseline_keyboard_arrow_down_24,
                 contentDescription = "Pilih",
             )
         }

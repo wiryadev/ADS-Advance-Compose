@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -75,11 +76,8 @@ fun ItemBus(
                 Spacer(
                     modifier = Modifier.width(24.dp)
                 )
-                Image(
-                    painter = painterResource(
-                        id = R.drawable.ic_baseline_chevron_right_24_grey
-                    ),
-                    contentDescription = "",
+                ArrowIcon(
+                    drawable = R.drawable.ic_baseline_chevron_right_24_grey,
                 )
             }
         }
