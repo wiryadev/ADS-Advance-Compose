@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -22,14 +23,13 @@ import com.wiryadev.adsadvancecompose.ui.theme.Montserrat
 
 @Composable
 fun TravelCard(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    shape: Shape = RoundedCornerShape(24.dp),
 ) {
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .clip(
-                shape = RoundedCornerShape(16.dp)
-            )
+            .clip(shape)
             .background(MaterialTheme.colors.background)
             .padding(24.dp)
     ) {
