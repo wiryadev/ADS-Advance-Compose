@@ -30,10 +30,11 @@ fun SearchBusResultSummaryBox(
     locationTo: String,
     date: String,
     searchResult: Int,
+    modifier: Modifier = Modifier,
     shape: Shape = RoundedCornerShape(24.dp),
 ) {
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .clip(shape)
             .background(MaterialTheme.colors.background)
