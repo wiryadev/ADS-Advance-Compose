@@ -6,7 +6,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
@@ -19,7 +18,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
-import com.wiryadev.adsadvancecompose.ui.components.*
+import com.wiryadev.adsadvancecompose.ui.components.ItemBus
+import com.wiryadev.adsadvancecompose.ui.components.SearchBusResultSummaryBox
 import com.wiryadev.adsadvancecompose.ui.theme.ADSAdvanceComposeTheme
 import com.wiryadev.adsadvancecompose.ui.theme.Montserrat
 import kotlin.random.Random
