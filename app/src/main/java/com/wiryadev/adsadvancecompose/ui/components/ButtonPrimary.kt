@@ -45,7 +45,6 @@ fun ButtonPrimary(
                     )
                 )
             )
-            .padding(vertical = 12.dp)
             .clickable(
                 onClick = onClick,
                 role = Role.Button
@@ -66,7 +65,11 @@ fun ButtonPrimary(
                     fontWeight = FontWeight.Bold,
                     fontSize = 18.sp
                 ),
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(
+                        vertical = 12.dp
+                    ),
                 textAlign = TextAlign.Center,
                 maxLines = 1
             )
