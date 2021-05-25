@@ -1,41 +1,80 @@
 package com.wiryadev.adsadvancecompose.ui.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.wiryadev.adsadvancecompose.R
 import com.wiryadev.adsadvancecompose.ui.theme.ADSAdvanceComposeTheme
+import com.wiryadev.adsadvancecompose.ui.theme.Montserrat
 
 // Placeholder
 @Composable
-fun EditTextPrimary() {
+fun EditTextPrimary(
+    label: String,
+    leadingIcon: Int,
+    contentDescription: String? = null,
+) {
     val textState = remember { mutableStateOf(TextFieldValue()) }
     TextField(
         value = textState.value,
         onValueChange = {
             textState.value = it
         },
-        label = { Text("Email Address") },
-        shape = RoundedCornerShape(24.dp),
-        leadingIcon = {
-            Icon(
-                painter = painterResource(id = R.drawable.ic_outline_email_24),
-                contentDescription = ""
+        modifier = Modifier
+            .fillMaxWidth()
+            .border(
+                width = 2.dp,
+                color = MaterialTheme.colors.onSurface
+                    .copy(alpha = TextFieldDefaults.IconOpacity),
+                shape = RoundedCornerShape(24.dp)
+            ),
+        label = {
+            Text(
+                text = label,
+                style = TextStyle(
+                    fontFamily = Montserrat,
+                    fontWeight = FontWeight.Medium,
+                    fontSize = 14.sp
+                ),
             )
         },
+        leadingIcon = {
+            Icon(
+                painter = painterResource(
+                    id = leadingIcon
+                ),
+                contentDescription = contentDescription ?: label,
+                modifier = Modifier
+                    .padding(
+                        start = 8.dp
+                    ),
+            )
+        },
+        singleLine = true,
+        colors = TextFieldDefaults.textFieldColors(
+            backgroundColor = Color.Transparent,
+            focusedIndicatorColor = Color.Transparent,
+            unfocusedIndicatorColor = Color.Transparent,
+            disabledIndicatorColor = Color.Transparent,
+            errorIndicatorColor = Color.Transparent,
+        ),
     )
 }
 
@@ -47,8 +86,12 @@ fun EditTextPrimaryPreview() {
             modifier = Modifier
                 .fillMaxSize()
                 .background(MaterialTheme.colors.background)
+                .padding(16.dp)
         ) {
-            EditTextPrimary()
+            EditTextPrimary(
+                "Email Addres",
+                R.drawable.ic_outline_email_24
+            )
         }
     }
 }
