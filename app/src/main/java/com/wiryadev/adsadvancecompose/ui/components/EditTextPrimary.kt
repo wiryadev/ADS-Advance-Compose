@@ -17,6 +17,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.TextFieldValue
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -30,6 +31,7 @@ fun EditTextPrimary(
     label: String,
     leadingIcon: Int,
     contentDescription: String? = null,
+    visualTransformation: VisualTransformation = VisualTransformation.None
 ) {
     val textState = remember { mutableStateOf(TextFieldValue()) }
     TextField(
@@ -41,8 +43,7 @@ fun EditTextPrimary(
             .fillMaxWidth()
             .border(
                 width = 2.dp,
-                color = MaterialTheme.colors.onSurface
-                    .copy(alpha = TextFieldDefaults.IconOpacity),
+                color = Color(0xFF707070),
                 shape = RoundedCornerShape(24.dp)
             ),
         label = {
@@ -65,10 +66,13 @@ fun EditTextPrimary(
                     .padding(
                         start = 8.dp
                     ),
+                tint = Color(0xFF707070)
             )
         },
+        visualTransformation = visualTransformation,
         singleLine = true,
         colors = TextFieldDefaults.textFieldColors(
+            textColor = Color(0xFF707070),
             backgroundColor = Color.Transparent,
             focusedIndicatorColor = Color.Transparent,
             unfocusedIndicatorColor = Color.Transparent,
