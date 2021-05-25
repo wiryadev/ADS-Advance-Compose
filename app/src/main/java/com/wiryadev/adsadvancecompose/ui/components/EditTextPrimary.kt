@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
@@ -28,16 +29,16 @@ import com.wiryadev.adsadvancecompose.ui.theme.Montserrat
 // Placeholder
 @Composable
 fun EditTextPrimary(
+    text: MutableState<TextFieldValue>,
     label: String,
     leadingIcon: Int,
     contentDescription: String? = null,
     visualTransformation: VisualTransformation = VisualTransformation.None
 ) {
-    val textState = remember { mutableStateOf(TextFieldValue()) }
     TextField(
-        value = textState.value,
+        value = text.value,
         onValueChange = {
-            textState.value = it
+            text.value = it
         },
         modifier = Modifier
             .fillMaxWidth()
@@ -45,7 +46,8 @@ fun EditTextPrimary(
                 width = 2.dp,
                 color = Color(0xFF707070),
                 shape = RoundedCornerShape(24.dp)
-            ),
+            )
+            .padding(horizontal = 16.dp),
         label = {
             Text(
                 text = label,
@@ -62,10 +64,6 @@ fun EditTextPrimary(
                     id = leadingIcon
                 ),
                 contentDescription = contentDescription ?: label,
-                modifier = Modifier
-                    .padding(
-                        start = 8.dp
-                    ),
                 tint = Color(0xFF707070)
             )
         },
@@ -86,6 +84,7 @@ fun EditTextPrimary(
 @Composable
 fun EditTextPrimaryPreview() {
     ADSAdvanceComposeTheme {
+        val text = remember { mutableStateOf(TextFieldValue()) }
         Box(
             modifier = Modifier
                 .fillMaxSize()
@@ -93,8 +92,9 @@ fun EditTextPrimaryPreview() {
                 .padding(16.dp)
         ) {
             EditTextPrimary(
+                text,
                 "Email Addres",
-                R.drawable.ic_outline_email_24
+                R.drawable.ic_outline_email_24,
             )
         }
     }
