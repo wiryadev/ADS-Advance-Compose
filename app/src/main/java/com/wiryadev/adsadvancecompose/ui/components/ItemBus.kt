@@ -1,7 +1,10 @@
 package com.wiryadev.adsadvancecompose.ui.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.gestures.scrollable
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -76,9 +79,14 @@ fun ItemBus(
             }
         }
         Spacer(modifier = Modifier.height(16.dp))
-        Row {
+        Row(
+            modifier = Modifier
+                .horizontalScroll(rememberScrollState())
+                .fillMaxWidth()
+        ) {
             for (i in 0..item) {
-                ItemTime(time = "0$i.00")
+                ItemTime(time = "0$i.00", selected = false)
+                ItemTime(time = "0$i.00", selected = true)
             }
         }
     }
@@ -89,7 +97,7 @@ fun ItemBus(
 fun BusItemPreview() {
     ADSAdvanceComposeTheme {
         ItemBus(
-            Random.nextInt(1, 3)
+            Random.nextInt(1, 2)
         )
     }
 }
