@@ -76,7 +76,7 @@ fun ItemBus(
             }
         }
         Spacer(modifier = Modifier.height(16.dp))
-        Column {
+        Row {
             for (i in 0..item) {
                 ItemTime(time = "0$i.00")
             }
