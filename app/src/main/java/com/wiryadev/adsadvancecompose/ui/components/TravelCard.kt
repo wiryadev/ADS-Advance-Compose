@@ -76,7 +76,7 @@ fun TravelCard(
                     color = MaterialTheme.colors.onSurface,
                     style = TextStyle(
                         fontFamily = Montserrat,
-                        fontWeight = FontWeight.Medium,
+                        fontWeight = FontWeight.SemiBold,
                         fontSize = 18.sp
                     ),
                 )
@@ -138,7 +138,7 @@ fun TravelCard(
                     color = MaterialTheme.colors.onSurface,
                     style = TextStyle(
                         fontFamily = Montserrat,
-                        fontWeight = FontWeight.Medium,
+                        fontWeight = FontWeight.SemiBold,
                         fontSize = 18.sp
                     )
                 )

@@ -95,40 +95,6 @@ fun DepartureCard(
                 contentDescription = "Pilih",
             )
         }
-        Spacer(
-            modifier = Modifier
-                .height(16.dp)
-        )
-        Row(
-            modifier = Modifier
-                .fillMaxWidth(),
-            verticalAlignment = Alignment.Bottom,
-            horizontalArrangement = Arrangement.SpaceBetween,
-        ) {
-            Column {
-                Text(
-                    text = "Tipe Bus",
-                    color = Color(0xFFA7ADBF),
-                    style = TextStyle(
-                        fontFamily = Montserrat,
-                        fontSize = 12.sp
-                    )
-                )
-                Text(
-                    text = "Pilih Bus",
-                    color = MaterialTheme.colors.onSurface,
-                    style = TextStyle(
-                        fontFamily = Montserrat,
-                        fontWeight = FontWeight.Medium,
-                        fontSize = 14.sp
-                    )
-                )
-            }
-            ArrowIcon(
-                drawable = R.drawable.ic_baseline_keyboard_arrow_down_24,
-                contentDescription = "Pilih",
-            )
-        }
     }
 }
 

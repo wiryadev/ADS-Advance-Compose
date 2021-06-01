@@ -82,8 +82,7 @@ fun BusSelectionScreen() {
             searchResult = 50,
             modifier = Modifier
                 .constrainAs(busResultCard) {
-                    top.linkTo(bgTop.bottom)
-                    bottom.linkTo(bgTop.bottom)
+                    top.linkTo(bgTop.bottom, margin = (-64).dp)
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
                 }

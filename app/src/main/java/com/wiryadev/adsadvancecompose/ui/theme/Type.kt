@@ -16,8 +16,8 @@ val Montserrat = FontFamily(
     Font(R.font.montserrat_medium, FontWeight.Medium),
     Font(R.font.montserrat_semi_bold, FontWeight.SemiBold),
     Font(R.font.montserrat_bold, FontWeight.Bold),
-
 )
+
 val Typography = Typography(
     body1 = TextStyle(
         fontFamily = Montserrat,

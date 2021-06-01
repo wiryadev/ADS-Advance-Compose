@@ -6,6 +6,7 @@ import androidx.compose.foundation.indication
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.runtime.Composable
@@ -31,29 +32,33 @@ fun ButtonPrimary(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     text: String,
-    shape: Shape = RoundedCornerShape(24.dp),
+    shape: Shape = RoundedCornerShape(50),
 ) {
-    Box(
+    Surface(
         modifier = modifier
             .fillMaxWidth()
             .clip(shape = shape)
-            .background(
-                brush = Brush.linearGradient(
-                    colors = listOf(
-                        Color(0xFF584BDD),
-                        Color(0xFFB755FF),
-                    )
-                )
-            )
             .clickable(
                 onClick = onClick,
                 role = Role.Button
-            )
+            ),
+        elevation = 8.dp
     ) {
         Row(
             Modifier
                 .fillMaxWidth()
-                .indication(interactionSource = remember { MutableInteractionSource() }, indication = rememberRipple()),
+                .indication(
+                    interactionSource = remember { MutableInteractionSource() },
+                    indication = rememberRipple()
+                )
+                .background(
+                    brush = Brush.linearGradient(
+                        colors = listOf(
+                            Color(0xFF584BDD),
+                            Color(0xFFB755FF),
+                        )
+                    )
+                ),
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically,
         ) {
@@ -68,7 +73,7 @@ fun ButtonPrimary(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(
-                        vertical = 12.dp
+                        vertical = 16.dp
                     ),
                 textAlign = TextAlign.Center,
                 maxLines = 1
