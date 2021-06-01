@@ -38,7 +38,7 @@ fun BusTypeCard(
             )
         )
         Spacer(
-            modifier = Modifier.height(8.dp)
+            modifier = Modifier.height(16.dp)
         )
         Row(
             modifier = Modifier

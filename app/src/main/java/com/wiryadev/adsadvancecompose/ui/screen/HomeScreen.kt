@@ -22,6 +22,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
+import com.wiryadev.adsadvancecompose.MainActivity.Companion.GRADIENT_BOX_SIZE
 import com.wiryadev.adsadvancecompose.ui.components.BusTypeCard
 import com.wiryadev.adsadvancecompose.ui.components.ButtonPrimary
 import com.wiryadev.adsadvancecompose.ui.components.DepartureCard
@@ -149,7 +150,7 @@ fun HomeScreen() {
                         )
                     )
                 )
-                .fillMaxHeight(0.25f)
+                .fillMaxHeight(GRADIENT_BOX_SIZE)
                 .fillMaxWidth()
         )
         Column(
@@ -157,9 +158,11 @@ fun HomeScreen() {
                 .fillMaxSize()
                 .padding(horizontal = 16.dp)
                 .verticalScroll(rememberScrollState()),
-            verticalArrangement = Arrangement.spacedBy(24.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
+            Spacer(
+                modifier = Modifier.height(32.dp)
+            )
             Text(
                 text = "Cari Bus",
                 color = Color.White,
@@ -169,24 +172,31 @@ fun HomeScreen() {
                     fontSize = 28.sp,
                     fontWeight = FontWeight.SemiBold
                 ),
-                modifier = Modifier.padding(top = 32.dp),
             )
-            TravelCard(
-                modifier = Modifier,
+            Spacer(
+                modifier = Modifier.height(24.dp)
             )
-            DepartureCard(
-                modifier = Modifier,
+            TravelCard()
+            Spacer(
+                modifier = Modifier.height(24.dp)
+            )
+            DepartureCard()
+            Spacer(
+                modifier = Modifier.height(24.dp)
             )
             BusTypeCard(
                 selected = "Ekonomi",
-                modifier = Modifier,
             )
-            Spacer(modifier = Modifier.height(20.dp))
+            Spacer(
+                modifier = Modifier.height(32.dp)
+            )
             ButtonPrimary(
                 onClick = { },
                 text = "Cari Bus",
             )
-            Spacer(modifier = Modifier.height(32.dp))
+            Spacer(
+                modifier = Modifier.height(32.dp)
+            )
         }
     }
 }

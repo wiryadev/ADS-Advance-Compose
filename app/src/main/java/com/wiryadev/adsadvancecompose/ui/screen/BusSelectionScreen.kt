@@ -18,6 +18,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
+import com.wiryadev.adsadvancecompose.MainActivity.Companion.GRADIENT_BOX_SIZE
 import com.wiryadev.adsadvancecompose.ui.components.ItemBus
 import com.wiryadev.adsadvancecompose.ui.components.SearchBusResultSummaryBox
 import com.wiryadev.adsadvancecompose.ui.theme.ADSAdvanceComposeTheme
@@ -50,7 +51,7 @@ fun BusSelectionScreen() {
                         )
                     )
                 )
-                .fillMaxHeight(0.25f)
+                .fillMaxHeight(GRADIENT_BOX_SIZE)
                 .fillMaxWidth()
                 .constrainAs(bgTop) {
                     top.linkTo(parent.top)
