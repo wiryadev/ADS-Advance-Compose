@@ -1,10 +1,7 @@
 package com.wiryadev.adsadvancecompose.ui.components
 
 import android.util.Log
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -17,6 +14,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.wiryadev.adsadvancecompose.MainActivity.Companion.BOTTOM_BAR_HEIGHT
 import com.wiryadev.adsadvancecompose.ui.navigation.BottomNavigationItem
 import com.wiryadev.adsadvancecompose.ui.theme.ADSAdvanceComposeTheme
 
@@ -29,7 +27,7 @@ fun BottomNavigationView(
     BottomNavigation(
         modifier = modifier
             .fillMaxWidth()
-            .height(64.dp),
+            .fillMaxHeight(BOTTOM_BAR_HEIGHT),
         backgroundColor = MaterialTheme.colors.background
     ) {
         val navBackStackEntry by navController.currentBackStackEntryAsState()

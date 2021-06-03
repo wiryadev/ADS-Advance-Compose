@@ -18,6 +18,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.wiryadev.adsadvancecompose.MainActivity.Companion.FRAGMENT_HEIGHT
 import com.wiryadev.adsadvancecompose.ui.components.ItemNotification
 import com.wiryadev.adsadvancecompose.ui.theme.ADSAdvanceComposeTheme
 import com.wiryadev.adsadvancecompose.ui.theme.Montserrat
@@ -70,7 +71,7 @@ fun NotificationScreen() {
             LazyColumn(
                 state = listState,
                 modifier = Modifier
-                    .fillMaxHeight(0.85f)
+                    .fillMaxHeight(FRAGMENT_HEIGHT)
                     .clip(RoundedCornerShape(24.dp)),
                 verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {

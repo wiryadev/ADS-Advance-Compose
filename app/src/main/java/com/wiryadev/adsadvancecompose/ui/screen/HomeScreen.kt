@@ -1,16 +1,11 @@
 package com.wiryadev.adsadvancecompose.ui.screen
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.gestures.Orientation
-import androidx.compose.foundation.gestures.rememberScrollableState
-import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
@@ -21,8 +16,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.constraintlayout.compose.ConstraintLayout
-import com.wiryadev.adsadvancecompose.MainActivity.Companion.GRADIENT_BOX_SIZE
+import com.wiryadev.adsadvancecompose.MainActivity.Companion.GRADIENT_BOX_HEIGHT
 import com.wiryadev.adsadvancecompose.ui.components.BusTypeCard
 import com.wiryadev.adsadvancecompose.ui.components.ButtonPrimary
 import com.wiryadev.adsadvancecompose.ui.components.DepartureCard
@@ -150,7 +144,7 @@ fun HomeScreen() {
                         )
                     )
                 )
-                .fillMaxHeight(GRADIENT_BOX_SIZE)
+                .fillMaxHeight(GRADIENT_BOX_HEIGHT)
                 .fillMaxWidth()
         )
         Column(

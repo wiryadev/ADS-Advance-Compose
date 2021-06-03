@@ -3,9 +3,7 @@ package com.wiryadev.adsadvancecompose.ui.screen
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -19,7 +17,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.wiryadev.adsadvancecompose.MainActivity.Companion.GRADIENT_BOX_SIZE
+import com.wiryadev.adsadvancecompose.MainActivity.Companion.FRAGMENT_HEIGHT
+import com.wiryadev.adsadvancecompose.MainActivity.Companion.GRADIENT_BOX_HEIGHT
 import com.wiryadev.adsadvancecompose.ui.components.ItemBooking
 import com.wiryadev.adsadvancecompose.ui.theme.ADSAdvanceComposeTheme
 import com.wiryadev.adsadvancecompose.ui.theme.Montserrat
@@ -43,7 +42,7 @@ fun BookingScreen() {
                         )
                     )
                 )
-                .fillMaxHeight(GRADIENT_BOX_SIZE)
+                .fillMaxHeight(GRADIENT_BOX_HEIGHT)
                 .fillMaxWidth()
         )
         Column(
@@ -70,7 +69,7 @@ fun BookingScreen() {
             )
             LazyColumn(
                 modifier = Modifier
-                    .fillMaxHeight(0.85f)
+                    .fillMaxHeight(FRAGMENT_HEIGHT)
                     .clip(RoundedCornerShape(24.dp)),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
