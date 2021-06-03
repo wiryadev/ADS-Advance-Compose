@@ -1,7 +1,10 @@
 package com.wiryadev.adsadvancecompose.ui.components
 
 import android.util.Log
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -16,7 +19,6 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.wiryadev.adsadvancecompose.MainActivity.Companion.BOTTOM_BAR_HEIGHT
 import com.wiryadev.adsadvancecompose.ui.navigation.BottomNavigationItem
 import com.wiryadev.adsadvancecompose.ui.theme.ADSAdvanceComposeTheme
 import com.wiryadev.adsadvancecompose.ui.theme.Montserrat
@@ -29,8 +31,7 @@ fun BottomNavigationView(
 ) {
     BottomNavigation(
         modifier = modifier
-            .fillMaxWidth()
-            .fillMaxHeight(BOTTOM_BAR_HEIGHT),
+            .fillMaxWidth(),
         backgroundColor = MaterialTheme.colors.background
     ) {
         val navBackStackEntry by navController.currentBackStackEntryAsState()
@@ -45,7 +46,6 @@ fun BottomNavigationView(
                     // This if check gives us a "singleTop" behavior where we do not create a
                     // second instance of the composable if we are already on that destination
                     if (currentRoute != item.route) {
-                        Log.d("Nav", "BottomNavigationView: executed")
                         navController.navigate(item.route)
                     }
                 },

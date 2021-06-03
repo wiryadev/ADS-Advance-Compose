@@ -189,7 +189,7 @@ fun HomeScreen() {
                 text = "Cari Bus",
             )
             Spacer(
-                modifier = Modifier.height(32.dp)
+                modifier = Modifier.height(36.dp)
             )
         }
     }
