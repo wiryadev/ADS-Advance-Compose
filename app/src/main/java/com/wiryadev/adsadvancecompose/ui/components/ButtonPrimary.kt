@@ -37,11 +37,7 @@ fun ButtonPrimary(
     Surface(
         modifier = modifier
             .fillMaxWidth()
-            .clip(shape = shape)
-            .clickable(
-                onClick = onClick,
-                role = Role.Button
-            ),
+            .clip(shape = shape),
         elevation = 8.dp
     ) {
         Row(
@@ -58,6 +54,10 @@ fun ButtonPrimary(
                             Color(0xFFB755FF),
                         )
                     )
+                )
+                .clickable(
+                    onClick = onClick,
+                    role = Role.Button
                 ),
             horizontalArrangement = Arrangement.Center,
             verticalAlignment = Alignment.CenterVertically,

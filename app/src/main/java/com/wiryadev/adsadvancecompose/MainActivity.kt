@@ -9,6 +9,7 @@ import androidx.navigation.compose.rememberNavController
 import com.wiryadev.adsadvancecompose.ui.components.BottomNavigationView
 import com.wiryadev.adsadvancecompose.ui.navigation.BottomNavigationItem
 import com.wiryadev.adsadvancecompose.ui.navigation.MainNavigation
+import com.wiryadev.adsadvancecompose.ui.screen.HomeScreen
 import com.wiryadev.adsadvancecompose.ui.theme.ADSAdvanceComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -45,7 +46,6 @@ class MainActivity : ComponentActivity() {
                     MainNavigation(navController = navController)
                 }
             }
-
         }
     }
 }
