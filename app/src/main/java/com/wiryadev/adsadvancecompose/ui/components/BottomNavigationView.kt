@@ -22,6 +22,7 @@ import androidx.navigation.compose.rememberNavController
 import com.wiryadev.adsadvancecompose.ui.navigation.BottomNavigationItem
 import com.wiryadev.adsadvancecompose.ui.theme.ADSAdvanceComposeTheme
 import com.wiryadev.adsadvancecompose.ui.theme.Montserrat
+import com.wiryadev.adsadvancecompose.R
 
 @Composable
 fun BottomNavigationView(
@@ -55,8 +56,12 @@ fun BottomNavigationView(
                             id = item.icon
                         ),
                         contentDescription = "",
-                        modifier = Modifier
-                            .height(24.dp),
+                        modifier = if (item.icon != R.drawable.ic_baseline_person_outline_24) {
+                            Modifier
+                                .height(24.dp)
+                        } else {
+                            Modifier
+                        },
                         tint = if (selected) {
                             MaterialTheme.colors.primary
                         } else {
