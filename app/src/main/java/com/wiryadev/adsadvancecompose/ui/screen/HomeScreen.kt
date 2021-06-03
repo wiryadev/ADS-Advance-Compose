@@ -168,15 +168,15 @@ fun HomeScreen() {
                 ),
             )
             Spacer(
-                modifier = Modifier.height(24.dp)
+                modifier = Modifier.height(16.dp)
             )
             TravelCard()
             Spacer(
-                modifier = Modifier.height(24.dp)
+                modifier = Modifier.height(16.dp)
             )
             DepartureCard()
             Spacer(
-                modifier = Modifier.height(24.dp)
+                modifier = Modifier.height(16.dp)
             )
             BusTypeCard(
                 selected = "Ekonomi",

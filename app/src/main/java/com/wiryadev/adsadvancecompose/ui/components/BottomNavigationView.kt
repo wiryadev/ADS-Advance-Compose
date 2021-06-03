@@ -9,14 +9,17 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.wiryadev.adsadvancecompose.MainActivity.Companion.BOTTOM_BAR_HEIGHT
 import com.wiryadev.adsadvancecompose.ui.navigation.BottomNavigationItem
 import com.wiryadev.adsadvancecompose.ui.theme.ADSAdvanceComposeTheme
+import com.wiryadev.adsadvancecompose.ui.theme.Montserrat
 
 @Composable
 fun BottomNavigationView(
@@ -48,8 +51,12 @@ fun BottomNavigationView(
                 },
                 icon = {
                     Icon(
-                        painter = painterResource(id = item.icon),
+                        painter = painterResource(
+                            id = item.icon
+                        ),
                         contentDescription = "",
+                        modifier = Modifier
+                            .height(24.dp),
                         tint = if (selected) {
                             MaterialTheme.colors.primary
                         } else {
@@ -61,6 +68,10 @@ fun BottomNavigationView(
                     Text(
                         text = stringResource(
                             id = item.resourceId
+                        ),
+                        style = TextStyle(
+                            fontFamily = Montserrat,
+                            fontSize = 11.sp,
                         )
                     )
                 },
