@@ -14,6 +14,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
@@ -55,13 +56,17 @@ fun BottomNavigationView(
                         painter = painterResource(
                             id = item.icon
                         ),
-                        contentDescription = "",
-                        modifier = if (item.icon != R.drawable.ic_baseline_person_outline_24) {
-                            Modifier
-                                .height(24.dp)
-                        } else {
-                            Modifier
-                        },
+                        contentDescription = stringResource(
+                            id = item.resourceId
+                        ),
+                        modifier = Modifier
+                            .height(
+                                if (item.icon != R.drawable.ic_baseline_person_outline_24) {
+                                    24.dp
+                                } else {
+                                    Dp.Unspecified
+                                }
+                            ),
                         tint = if (selected) {
                             MaterialTheme.colors.primary
                         } else {
