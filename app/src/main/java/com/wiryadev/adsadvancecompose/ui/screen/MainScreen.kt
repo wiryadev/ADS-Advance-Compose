@@ -27,7 +27,7 @@ fun MainScreen() {
                 items = items,
             )
         },
-    ) {
-        MainNavigation(navController = navController)
+    ) { innerPadding ->
+        MainNavigation(navController = navController, contentPadding = innerPadding)
     }
 }

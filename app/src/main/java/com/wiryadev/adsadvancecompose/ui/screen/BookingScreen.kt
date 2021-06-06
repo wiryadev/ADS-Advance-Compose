@@ -17,8 +17,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.wiryadev.adsadvancecompose.MainActivity.Companion.FRAGMENT_HEIGHT
 import com.wiryadev.adsadvancecompose.MainActivity.Companion.GRADIENT_BOX_HEIGHT
+import com.wiryadev.adsadvancecompose.MainActivity.Companion.SCREEN_BOTTOM_PADDING
 import com.wiryadev.adsadvancecompose.ui.components.ItemBooking
 import com.wiryadev.adsadvancecompose.ui.theme.ADSAdvanceComposeTheme
 import com.wiryadev.adsadvancecompose.ui.theme.Montserrat
@@ -69,7 +69,7 @@ fun BookingScreen() {
             )
             LazyColumn(
                 modifier = Modifier
-                    .fillMaxHeight(FRAGMENT_HEIGHT)
+                    .padding(bottom = SCREEN_BOTTOM_PADDING)
                     .clip(RoundedCornerShape(24.dp)),
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {

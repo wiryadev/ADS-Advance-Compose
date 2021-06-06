@@ -183,11 +183,11 @@ fun ProfileScreen() {
 fun ItemProfile(
     text: String,
 ) {
-    Box(
+    Column(
         modifier = Modifier
             .fillMaxWidth()
             .background(MaterialTheme.colors.background)
-            .padding(vertical = 6.dp, horizontal = 24.dp)
+            .padding(horizontal = 24.dp)
     ) {
         Text(
             text = text,
@@ -197,6 +197,8 @@ fun ItemProfile(
                 fontFamily = Montserrat,
                 fontSize = 16.sp,
             ),
+            modifier = Modifier
+                .padding(vertical = 6.dp),
         )
     }
 }
